@@ -14,12 +14,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #222831;
+  background-color: #232123;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 20px;
 }
 
-.active {
-  background-color: #606C80; 
-}
+/* .active {
+  background-color: #606C80;
+} */
