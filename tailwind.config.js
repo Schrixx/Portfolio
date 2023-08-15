@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        raisinBlack: "#221E22",
+        raisinBlack: "#232123",
         lighterRaisinBlack: "#373137",
         hyundaiYellow: "#ECA72C",
         whiteSmoke: "#F2F2F2",
