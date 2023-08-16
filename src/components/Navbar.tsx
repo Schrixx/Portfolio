@@ -1,19 +1,6 @@
-import { NavLink } from "react-router-dom"
-import { navbarData } from "src/data/navbarData"
-import { v4 as uuidv4 } from 'uuid'
-import { AiOutlineMenu } from 'react-icons/ai'
-import { SlArrowRight } from "react-icons/sl"
-import { useState } from "react"
 
 
 const Navbar = () => {
-
-  const [mobileMenu, setMobileMenu] = useState<boolean>(false)
-
-  const manageMobileMenu = () => {
-    setMobileMenu(mobileMenu => !mobileMenu)
-  }
-
   return (
     <header className={`fixed z-50 w-full flex flex-col justify-center`}>
 
@@ -50,11 +37,10 @@ const Navbar = () => {
                     <span className="pr-6"><SlArrowRight size="20px" color="#ECA72C" /></span>
                   </li>
                 )
-              })} 
+              })}
           </ul>
         </nav>
       </div>
-
     </header>
   )
 }
