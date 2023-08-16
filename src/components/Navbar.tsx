@@ -26,8 +26,8 @@ const Navbar = () => {
         <ul className="hidden sm:flex list-none w-full lg:max-w-fit lg:mx-auto shadow-lg lg:border-x-[1px] lg:border-b-[1px] border-lighterRaisinBlack">
           {navbarData.map((item: any) => {
             return (
-              <li key={uuidv4()} className="flex flex-grow lg:flex-grow-0 first-letter:flex-shrink border-r-[1px] last:border-r-0 border-lighterRaisinBlack first:bg-lighterRaisinBlack">
-                <NavLink to={item.path} className="p-4 lg:pl-7 lg:pr-[12vw] pl-5 transition-colors duration-500 text-whiteSmoke hover:text-hyundaiYellow">
+              <li key={uuidv4()} className="flex flex-grow lg:flex-grow-0 lg:flex-shrink border-r-[1px] last:border-r-0 border-lighterRaisinBlack first:bg-lighterRaisinBlack">
+                <NavLink to={item.path} className="p-4 lg:pl-7 lg:pr-[13vw] pl-5 transition-colors duration-500 text-whiteSmoke hover:text-hyundaiYellow">
                   <span className="tracking-widest text-base">{item.title}</span>
                 </NavLink>
               </li>
