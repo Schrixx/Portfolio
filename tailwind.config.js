@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        raisinBlack: "#232123",
+        lighterRaisinBlack: "#373137",
+        hyundaiYellow: "#ECA72C",
+        whiteSmoke: "#F2F2F2",
+      }
+    },
   },
   plugins: [],
 }
