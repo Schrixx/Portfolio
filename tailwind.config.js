@@ -16,6 +16,9 @@ export default {
         lighterBittersweet: "#FE9091",
         darkerBittersweet: "#DF4445",
         caribbeanCurrent: "#0F7173",
+      },
+      rotate: {
+        '270': '270deg',
       }
     },
   },
