@@ -5,11 +5,16 @@ import { TiDocumentText } from "react-icons/ti"
 
 import githubLogo from "assets/githubLogo.svg"
 import linkedInLogo from "assets/linkedInLogo.svg"
+import introCurvyLines from "assets/introCurvyLines.svg"
+
 import { NavLink } from "react-router-dom"
 
 const Home = () => {
   return (
     <Layout>
+      {/* intro background */}
+      <img src={introCurvyLines} className="hidden md:block absolute z-[-1] top-0 right-0" />
+
       {/* nav spacer */}
       <div className="pt-[65px] lg:pt-60" />
 
@@ -33,8 +38,8 @@ const Home = () => {
           <div className="flex justify-center items-center order-1 lg:order-2 my-16 lg:my-0">
             <div className="flex lg:flex-col items-center gap-4">
               <div className="bg-darkerBittersweet w-10 sm:w-36 lg:w-2 h-2 lg:h-36 mb-2" />
-              <NavLink to="https://github.com/Schrixx" target="_blank" data-tooltip="Github" className="tooltip"><img src={githubLogo} className="h-16 w-full" /></NavLink>
-              <NavLink to="https://www.linkedin.com/in/moses-osuna-a7501b9a/" target="_blank" data-tooltip="LinkedIn" className="tooltip"><img src={linkedInLogo} className="h-16 w-full" /></NavLink>
+              <NavLink to="https://github.com/Schrixx" target="_blank" data-tooltip="Github" className="md:tooltip"><img src={githubLogo} className="h-16 w-full" /></NavLink>
+              <NavLink to="https://www.linkedin.com/in/moses-osuna-a7501b9a/" target="_blank" data-tooltip="LinkedIn" className="md:tooltip"><img src={linkedInLogo} className="h-16 w-full" /></NavLink>
               <div className="bg-darkerBittersweet w-10 sm:w-36 lg:w-2 h-2 lg:h-36 mb-2" />
             </div>
           </div>
