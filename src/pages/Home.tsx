@@ -1,19 +1,21 @@
+import { NavLink } from "react-router-dom"
 import Layout from "src/components/Layout"
+import { v4 as uuidv4 } from 'uuid'
 
 import { BsCode } from "react-icons/bs"
 import { TiDocumentText } from "react-icons/ti"
 
-import githubLogo from "assets/githubLogo.svg"
-import linkedInLogo from "assets/linkedInLogo.svg"
+import githubIcon from "assets/logos/githubLogo.svg"
+import linkedInIcon from "assets/logos/linkedInLogo.svg"
 import introCurvyLines from "assets/introCurvyLines.svg"
 
-import { NavLink } from "react-router-dom"
+import { skillsData } from "src/data/skillsData"
 
 const Home = () => {
   return (
     <Layout>
       {/* intro background */}
-      <img src={introCurvyLines} className="hidden md:block absolute z-[-1] top-0 right-0" />
+      <img src={introCurvyLines} className="hidden sm:block absolute z-[-1] top-0 right-0" />
 
       {/* nav spacer */}
       <div className="pt-[65px] lg:pt-60" />
@@ -38,13 +40,37 @@ const Home = () => {
           <div className="flex justify-center items-center order-1 lg:order-2 my-16 lg:my-0">
             <div className="flex lg:flex-col items-center gap-4">
               <div className="bg-darkerBittersweet w-10 sm:w-36 lg:w-2 h-2 lg:h-36 mb-2" />
-              <NavLink to="https://github.com/Schrixx" target="_blank" data-tooltip="Github" className="md:tooltip"><img src={githubLogo} className="h-16 w-full" /></NavLink>
-              <NavLink to="https://www.linkedin.com/in/moses-osuna-a7501b9a/" target="_blank" data-tooltip="LinkedIn" className="md:tooltip"><img src={linkedInLogo} className="h-16 w-full" /></NavLink>
+              <NavLink to="https://github.com/Schrixx" target="_blank" data-tooltip="Github" className="md:tooltip"><img src={githubIcon} className="h-16 w-full" /></NavLink>
+              <NavLink to="https://www.linkedin.com/in/moses-osuna-a7501b9a/" target="_blank" data-tooltip="LinkedIn" className="md:tooltip"><img src={linkedInIcon} className="h-16 w-full" /></NavLink>
               <div className="bg-darkerBittersweet w-10 sm:w-36 lg:w-2 h-2 lg:h-36 mb-2" />
             </div>
           </div>
         </div>
       </div>
+
+      {/* spacer */}
+      <div className="pt-16 sm:pt-52" />
+
+      {/* skills */}
+      <div className="px-4 lg:px-8 xl:px-0 xl:max-w-7xl xl:mx-auto text-whiteSmoke flex flex-col gap-4">
+        <p className="tracking-widest">The Skills and Tools That Bring My Work To Life</p>
+        <ul className="flex flex-wrap gap-4">
+          {skillsData.map((item) => {
+            return (
+              <li key={uuidv4()} className="flex items-center gap-2 bg-lighterRaisinBlack p-2 rounded-lg lg:hover:scale-105 transition-transform">
+                <img src={item.icon} className="h-7 w-auto" />
+                <p className="tracking-wide cursor-default">{item.title}</p>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      {/* spacer */}
+      <div className="pt-16 sm:pt-52" />
+
+      {/* portfolio */}
+
     </Layout>
   )
 }
