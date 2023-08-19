@@ -46,3 +46,18 @@ export const skillsData = [
         title: "Javascript",
     },
 ]
+
+export const companyWebsiteSkills = [
+    {
+        icon: reactIcon,
+        title: "React",
+    },
+    {
+        icon: tailwindIcon,
+        title: "Tailwind",
+    },
+    {
+        icon: typescriptIcon,
+        title: "Typescript",
+    },
+]
