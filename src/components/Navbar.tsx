@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom"
 import { navbarData } from "src/data/navbarData"
 import { v4 as uuidv4 } from 'uuid'
 import { AiOutlineMenu } from 'react-icons/ai'
@@ -27,9 +26,9 @@ const Navbar = () => {
           {navbarData.map((item) => {
             return (
               <li key={uuidv4()} className="flex flex-grow lg:flex-grow-0 lg:flex-shrink border-r-[1px] last:border-r-0 border-lighterRaisinBlack">
-                <NavLink to={item.path} className="p-4 lg:pl-7 lg:pr-[13vw] pl-5 transition-colors duration-500 text-whiteSmoke hover:text-hyundaiYellow">
+                <a href={item.path} className="p-4 lg:pl-7 lg:pr-[13vw] pl-5 transition-colors duration-500 text-whiteSmoke hover:text-hyundaiYellow">
                   <span className="tracking-widest text-base">{item.title}</span>
-                </NavLink>
+                </a>
               </li>
             )
           })}
@@ -44,9 +43,9 @@ const Navbar = () => {
                 return (
                   <li key={uuidv4()} className="flex items-center w-full py-4">
                     <div className="h-px w-5 bg-hyundaiYellow" />
-                    <NavLink to={item.path} onClick={manageMobileMenu} className="pl-4 py-4 w-full transition-colors duration-500 text-whiteSmoke hover:text-hyundaiYellow">
+                    <a href={item.path} onClick={manageMobileMenu} className="pl-4 py-4 w-full transition-colors duration-500 text-whiteSmoke hover:text-hyundaiYellow">
                       <span className="tracking-wider">{item.title}</span>
-                    </NavLink>
+                    </a>
                     <span className="pr-6"><SlArrowRight size="20px" color="#ECA72C" /></span>
                   </li>
                 )
