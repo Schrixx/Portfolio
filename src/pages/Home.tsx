@@ -7,20 +7,29 @@ import { BsCode } from "react-icons/bs"
 import { HiCode } from "react-icons/hi"
 import { TiDocumentText } from "react-icons/ti"
 import { RiComputerLine } from "react-icons/ri"
+import { HiOutlineMail } from "react-icons/hi"
 
 import githubIcon from "assets/logos/githubLogo.svg"
 import linkedInIcon from "assets/logos/linkedInLogo.svg"
 import introCurvyLines from "assets/introCurvyLines.svg"
+import aboutIMG from "assets/aboutIMG.jpg"
 
 import { companyWebsiteSkills, skillsData } from "src/data/skillsData"
+import { useState } from "react"
 
 const Home = () => {
+  const [showAbout, setShowAbout] = useState<boolean>(false)
+
+  const toggleAbout = () => {
+    setShowAbout((showAbout) => !showAbout)
+  }
+
   return (
     <Layout>
       {/* intro background */}
       <img src={introCurvyLines} className="hidden sm:block absolute z-[-1] top-0 right-0" />
 
-      <div className="pt-[65px] lg:pt-60" />
+      <div id="intro" className="pt-[65px] lg:pt-60" />
 
       {/* intro */}
       <div id="intro" className="px-4 lg:px-8 text-whiteSmoke">
@@ -32,7 +41,7 @@ const Home = () => {
               <div className="h-px w-9 bg-bittersweet" />
             </div>
             <div className="flex flex-col gap-12">
-              <p className="text-4xl sm:text-5xl md:text-6xl curvyFont text-center sm:text-start">As a <span className="text-lighterHyundai font-medium">Front End Developer</span>, I enjoy creating responsive, user-friendly experiences while maintaining visually pleasing aesthetics.</p>
+              <p className="text-4xl sm:text-5xl md:text-6xl curvyFont text-center sm:text-start">As a <span className="text-lighterBittersweet font-medium">Front-End Developer</span>, I enjoy creating responsive, user-friendly experiences while maintaining visually pleasing aesthetics.</p>
               <div className="flex justify-center sm:justify-normal gap-8">
                 <a href="#portfolio" className="scroll-smooth"><button className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center"><span className="mr-4"><BsCode color="#F2F2F2" size="24" /></span>My Work</button></a>
                 <button className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center scale-90 sm:scale-100"><span className="mr-4"><TiDocumentText color="#F2F2F2" size="24" /></span>Resume</button>
@@ -67,31 +76,31 @@ const Home = () => {
         </ul>
       </div>
 
-      <div className="pt-16 sm:pt-52" />
+      <div id="portfolio" className="pt-16 sm:pt-52" />
 
       {/* portfolio */}
-      <div id="portfolio" className="px-4 lg:px-8 xl:px-0 xl:max-w-7xl xl:mx-auto text-whiteSmoke flex flex-col gap-20">
+      <div className="px-4 lg:px-8 xl:max-w-7xl xl:mx-auto text-whiteSmoke flex flex-col gap-20">
         <div className="flex flex-col items-center justify-center gap-4">
-          <h1 className="text-3xl font-semibold">
+          <h1 className="text-4xl font-semibold">
             Portfolio
           </h1>
           <p className="text-lighterHyundai">
             Check out my projects using video demonstrations, links to source code, and live websites.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between">
-          <div><iframe width="560" height="315" src="https://www.youtube.com/embed/YgzISpOb-MY?si=BVB57nhSI7Bl63Zu" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></div>
-          <div className="flex flex-col gap-4 max-w-lg">
+        <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
+          <div className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/YgzISpOb-MY?si=BVB57nhSI7Bl63Zu" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
+          <div className="flex flex-col gap-4 max-w-lg order-1 portfolioScreen:order-2">
             <div className="flex items-center gap-2">
               <h1 className="text-2xl font-semibold">
-                Responsive Company Website
+                1. Responsive Company Website
               </h1>
               <div className="h-px w-16 bg-hyundaiYellow" />
             </div>
             <p className="text-base text-evenLighterRaisinBlack">
-              This is a sample website made to replicate what an art company website may look like. 
-              It includes a main landing page, an about page, an artwork page, and a contact page. 
-              The layout and design was made by yours truly.
+              This is a sample website made to replicate what an art company website may look like.
+              It includes a main landing page, an about page, an artwork page, and a contact page.
+              The layout and design was made by myself, while taking inspiration from a large array of websites.
             </p>
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl font-semibold">Challenges</h1>
@@ -111,7 +120,7 @@ const Home = () => {
                 )
               })}
             </ul>
-            <IconContext.Provider value={{color: "#DF4445"}}>
+            <IconContext.Provider value={{color: "#ECA72C"}}>
               <div className="flex gap-4 items-center">
                 <NavLink to="https://github.com/Schrixx/Company-Website" target="_blank" className="pt-2 tooltip" data-tooltip="Source Code"><button><HiCode size="36" /></button></NavLink>
                 <NavLink to="https://landing-page-schrixx.vercel.app/" target="_blank" className="pt-2 tooltip" data-tooltip="Live Website"><button><RiComputerLine size="36" /></button></NavLink>
@@ -119,9 +128,76 @@ const Home = () => {
             </IconContext.Provider>
           </div>
         </div>
+        <div className="my-2 sm:my-4 portfolioScreen:my-0" />
+        <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
+          <div className="bg-lighterRaisinBlack w-[560px] h-[315px] flex items-center justify-center order-2 text-center">
+            <p className="text-2xl">Currently Under Development</p>
+          </div>
+          <div className="flex flex-col gap-4 max-w-lg order-1">
+            <div className="flex items-center gap-2">
+              <h1 className="text-2xl font-semibold">
+                2. Weather Web App
+              </h1>
+              <div className="h-px w-16 bg-hyundaiYellow" />
+            </div>
+            <p className="text-base text-evenLighterRaisinBlack">
+              This is a web app that displays the forecasted weather of a given location. 
+              It will tell you whether it's cloudy, the wind speed, humidity, what the weather feels like, and more.
+            </p>
+            <div className="flex flex-col gap-4">
+              <h1 className="text-2xl font-semibold">Challenges</h1>
+              <p className="text-base text-evenLighterRaisinBlack">
+                Currently under development.
+              </p>
+            </div>
+            <h1 className="text-2xl font-semibold">Tech Used</h1>
+            <ul className="flex flex-wrap gap-4">
+              <li className="text-evenLighterRaisinBlack text-base">Currently under development.</li>
+            </ul>
+            <IconContext.Provider value={{color: "#ECA72C"}}>
+              <div className="flex gap-4 items-center">
+                <NavLink to="https://github.com/Schrixx/Weather-App" target="_blank" className="pt-2 tooltip" data-tooltip="Source Code"><button><HiCode size="36" /></button></NavLink>
+              </div>
+            </IconContext.Provider>
+          </div>
+        </div>
       </div>
 
-      <div className="pt-16 sm:pt-52" />
+      <div id="about" className="pt-16 sm:pt-52" />
+
+      <div className="xl:max-w-7xl xl:mx-auto flex flex-col justify-center gap-20">
+        <div className="flex flex-col items-center gap-4">
+          <h1 className="text-4xl font-semibold text-whiteSmoke">
+            About Me
+          </h1>
+          <div className="h-px w-4/5 bg-whiteSmoke" />
+        </div>
+        <div className="flex justify-between items-center">
+          <img src={aboutIMG} width="525px" height="350px" className="rounded-3xl" />
+          <div className="flex flex-col gap-6 max-w-xl">
+            <h1 className="text-whiteSmoke text-6xl font-bold tracking-wide">
+              Moses Osuna
+            </h1>
+            <h1 className="text-caribbeanCurrent text-5xl font-bold tracking-wide">
+              Front-End Developer
+            </h1>
+            <p className="text-evenLighterRaisinBlack text-xl tracking-wide leading-normal">
+              Hello, I'm <span className="text-whiteSmoke">Moses Osuna</span>. I'm a <span className="text-whiteSmoke">Front-End Developer</span> based in 🌵<span className="text-whiteSmoke">Tucson, Arizona</span> who enjoys working with React and other front-end tools. 
+              I look forward to opportunities that allow me to showcase my creativity and logical skills within a development team.
+            </p>
+            <button onClick={toggleAbout} className={`${showAbout ? "hidden" : ""} underline italic text-evenLighterRaisinBlack text-start w-fit`}>Learn More...</button>
+            <a href="#contact" className="scroll-smooth"><button className="bg-caribbeanCurrent hover:bg-evenLighterRaisinBlack text-whiteSmoke rounded-lg p-2 sm:p-3 w-fit transition-colors flex items-center"><span className="mr-4"><HiOutlineMail color="#F2F2F2" size="24" /></span>Contact Me</button></a>
+          </div>
+          {showAbout && 
+          <div className="flex flex-col gap-6 max-w-xl">
+            <p>potato</p>
+            <button onClick={toggleAbout} className={`${showAbout ? "" : "hidden"} underline italic text-evenLighterRaisinBlack text-start w-fit`}>...Show Less</button>
+          </div>
+          }
+        </div>
+      </div>
+
+      <div id="contact" className="pt-16 sm:pt-52" />
     </Layout>
   )
 }
