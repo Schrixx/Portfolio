@@ -20,6 +20,9 @@ export default {
       },
       rotate: {
         '270': '270deg',
+      },
+      screens: {
+        'portfolioScreen': '1152px',
       }
     },
   },
