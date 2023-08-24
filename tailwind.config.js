@@ -23,6 +23,7 @@ export default {
       },
       screens: {
         'portfolioScreen': '1152px',
+        'aboutScreen': '1117px',
       }
     },
   },

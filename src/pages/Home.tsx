@@ -12,7 +12,9 @@ import { HiOutlineMail } from "react-icons/hi"
 import githubIcon from "assets/logos/githubLogo.svg"
 import linkedInIcon from "assets/logos/linkedInLogo.svg"
 import introCurvyLines from "assets/introCurvyLines.svg"
-import aboutIMG from "assets/aboutIMG.jpg"
+import aboutIMG from "assets/portfolioImages/aboutIMG.jpg"
+import violin from "assets/portfolioImages/violin.jpg"
+import cactus from "assets/portfolioImages/cactus.jpg"
 
 import { companyWebsiteSkills, skillsData } from "src/data/skillsData"
 import { useState } from "react"
@@ -164,40 +166,63 @@ const Home = () => {
       </div>
 
       <div id="about" className="pt-16 sm:pt-52" />
-
-      <div className="xl:max-w-7xl xl:mx-auto flex flex-col justify-center gap-20">
+      
+      {/* About */}
+      <div className="px-4 aboutScreen:px-0 aboutScreen:max-w-7xl aboutScreen:mx-auto flex flex-col justify-center gap-20 text-center aboutScreen:text-start">
         <div className="flex flex-col items-center gap-4">
           <h1 className="text-4xl font-semibold text-whiteSmoke">
             About Me
           </h1>
           <div className="h-px w-4/5 bg-whiteSmoke" />
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-wrap justify-center aboutScreen:justify-between items-center gap-4 aboutScreen:gap-0">
           <img src={aboutIMG} width="525px" height="350px" className="rounded-3xl" />
-          <div className="flex flex-col gap-6 max-w-xl">
-            <h1 className="text-whiteSmoke text-6xl font-bold tracking-wide">
+          <div className="flex flex-col gap-6 max-w-xl items-center aboutScreen:items-baseline">
+            <h1 className="text-whiteSmoke text-5xl sm:text-6xl font-bold tracking-wide">
               Moses Osuna
             </h1>
-            <h1 className="text-caribbeanCurrent text-5xl font-bold tracking-wide">
+            <h1 className="text-caribbeanCurrent text-4xl sm:text-5xl font-bold tracking-wide">
               Front-End Developer
             </h1>
             <p className="text-evenLighterRaisinBlack text-xl tracking-wide leading-normal">
               Hello, I'm <span className="text-whiteSmoke">Moses Osuna</span>. I'm a <span className="text-whiteSmoke">Front-End Developer</span> based in 🌵<span className="text-whiteSmoke">Tucson, Arizona</span> who enjoys working with React and other front-end tools. 
               I look forward to opportunities that allow me to showcase my creativity and logical skills within a development team.
             </p>
-            <button onClick={toggleAbout} className={`${showAbout ? "hidden" : ""} underline italic text-evenLighterRaisinBlack text-start w-fit`}>Learn More...</button>
-            <a href="#contact" className="scroll-smooth"><button className="bg-caribbeanCurrent hover:bg-evenLighterRaisinBlack text-whiteSmoke rounded-lg p-2 sm:p-3 w-fit transition-colors flex items-center"><span className="mr-4"><HiOutlineMail color="#F2F2F2" size="24" /></span>Contact Me</button></a>
+            <button onClick={toggleAbout} className={`${showAbout ? "hidden" : ""} underline italic text-evenLighterRaisinBlack text-start w-fit`}>Show More...</button>
+            <a href="#contact" className={`${showAbout ? "hidden": ""} scroll-smooth`}><button className="bg-caribbeanCurrent hover:bg-evenLighterRaisinBlack text-whiteSmoke rounded-lg p-2 sm:p-3 w-fit transition-colors flex items-center"><span className="mr-4"><HiOutlineMail color="#F2F2F2" size="24" /></span>Contact Me</button></a>
           </div>
-          {showAbout && 
-          <div className="flex flex-col gap-6 max-w-xl">
-            <p>potato</p>
-            <button onClick={toggleAbout} className={`${showAbout ? "" : "hidden"} underline italic text-evenLighterRaisinBlack text-start w-fit`}>...Show Less</button>
+        </div>
+        <div className={`${showAbout ? "flex": "hidden"} flex-wrap justify-center aboutScreen:justify-between items-center gap-4 aboutScreen:gap-0`}>
+          <img src={cactus} width="525px" height="350px" className="rounded-3xl" />
+          <div className="max-w-xl">
+            <p className="text-evenLighterRaisinBlack text-xl tracking-wide leading-normal">
+              I was born and raised in Tucson, Arizona always curious about technology and games as I was growing up.
+              I eventually started using my parents' computer, fiddling with settings and learning how the insides work.
+              This led to me taking many technology classes in highschool, and even attending college as a cybersecurity major, where I am today.
+              Even after all this time, I still have loads of fun learning about tech and programming!
+            </p>
           </div>
-          }
+        </div>
+        <div className={`${showAbout ? "flex": "hidden"} flex-wrap justify-center aboutScreen:justify-between items-center gap-4 aboutScreen:gap-0`}>
+          <img src={violin} width="525px" height="350px" className="rounded-3xl" />
+          <div className="max-w-xl">
+            <p className="text-evenLighterRaisinBlack text-xl tracking-wide leading-normal">
+              Due to my love for learning, my free time is never boring or dull. I love 🎨Art, keeping up with ⌨️Programming Languages, playing 🎮Games, and the 🎻Violin.
+              In particular I've recently been having lots of fun with art and bought a drawing tablet to create digital art!
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-6">
+          <button onClick={toggleAbout} className={`${showAbout ? "" : "hidden"} underline italic text-evenLighterRaisinBlack text-start w-fit`}>...Show Less</button>
+          <a href="#contact" className={`${showAbout ? "" : "hidden"} scroll-smooth`}><button className="bg-caribbeanCurrent hover:bg-evenLighterRaisinBlack text-whiteSmoke rounded-lg p-2 sm:p-3 w-fit transition-colors flex items-center"><span className="mr-4"><HiOutlineMail color="#F2F2F2" size="24" /></span>Contact Me</button></a>
         </div>
       </div>
 
       <div id="contact" className="pt-16 sm:pt-52" />
+
+      <div>
+
+      </div>
     </Layout>
   )
 }
