@@ -28,6 +28,8 @@ const Home = () => {
 
   return (
     <Layout>
+      <script src="https://web3forms.com/client/script.js" async defer></script>
+      
       {/* intro background */}
       <img src={introCurvyLines} className="hidden sm:block absolute z-[-1] top-0 right-0" />
 
@@ -100,9 +102,9 @@ const Home = () => {
               <div className="h-px w-16 bg-hyundaiYellow" />
             </div>
             <p className="text-base text-evenLighterRaisinBlack">
-              This is a sample website made to replicate what an art company website may look like.
+              This is my take on what a responsive art company website could look like.
               It includes a main landing page, an about page, an artwork page, and a contact page.
-              The layout and design was made by myself, while taking inspiration from a large array of websites.
+              The layout and design was made by myself, while taking inspiration from a very large array of websites.
             </p>
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl font-semibold">Challenges</h1>
@@ -196,7 +198,7 @@ const Home = () => {
           <img src={cactus} width="525px" height="350px" className="rounded-3xl" />
           <div className="max-w-xl">
             <p className="text-evenLighterRaisinBlack text-xl tracking-wide leading-normal">
-              I was born and raised in Tucson, Arizona always curious about technology and games as I was growing up.
+              I was born and raised in Tucson, Arizona, always curious about technology and games as I was growing up.
               I eventually started using my parents' computer, fiddling with settings and learning how the insides work.
               This led to me taking many technology classes in highschool, and even attending college as a cybersecurity major, where I am today.
               Even after all this time, I still have loads of fun learning about tech and programming!
@@ -220,9 +222,33 @@ const Home = () => {
 
       <div id="contact" className="pt-16 sm:pt-52" />
 
-      <div>
+      {/* contact */}
+      <div className="flex max-w-7xl mx-auto">
+        <div>
 
+        </div>
+        <div className='flex bg-lighterRaisinBlack flex-col shadow-smallContainer rounded-xl max-w-lg text-whiteSmoke'>
+          <div className='pt-12 pl-12'><h1 className="">Contact Me 📧</h1></div>
+          <form action="https://api.web3forms.com/submit" method="POST" className='flex flex-col gap-4 md:w-[500px] p-12 text-cloudBurstBlue'>
+            <input type="hidden" name="access_key" value="41efc0b3-b988-4930-83cc-a6e32aebe63c" />
+
+            <input type="text" placeholder='Full Name*' name="name" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg placeholder:text-gray-400 outline-caribbeanCurrent' required />
+            <input type="email" placeholder='Email*' name="email" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg outline-caribbeanCurrent' required />
+            <div className='flex flex-col'>
+              <label className='italic text-slate-500 text-xs'>optional*</label>
+              <input type="text" name="Phone Number" placeholder='Phone Number*' className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg outline-caribbeanCurrent' required />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="message">Message</label>
+              <label className="italic text-slate-500 text-sm">Max. 500 Characters</label>
+            </div>
+            <textarea maxLength={500} name="message" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg h-48 resize-none outline-caribbeanCurrent' required />
+            <button className='p-2 bg-darkerBittersweet hover:bg-bittersweet text-whiteSmoke rounded-lg max-w-fit transition-colors'>Submit</button>
+          </form>
+        </div>
       </div>
+
+      <div className="pt-16 sm:pt-52" />
     </Layout>
   )
 }
