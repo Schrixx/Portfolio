@@ -8,6 +8,8 @@ import { HiCode } from "react-icons/hi"
 import { TiDocumentText } from "react-icons/ti"
 import { RiComputerLine } from "react-icons/ri"
 import { HiOutlineMail } from "react-icons/hi"
+import { BsGithub } from "react-icons/bs"
+import { BsLinkedin } from "react-icons/bs"
 
 import githubIcon from "assets/logos/githubLogo.svg"
 import linkedInIcon from "assets/logos/linkedInLogo.svg"
@@ -47,7 +49,7 @@ const Home = () => {
             <div className="flex flex-col gap-12">
               <p className="text-4xl sm:text-5xl md:text-6xl curvyFont text-center sm:text-start">As a <span className="text-lighterBittersweet font-medium">Front-End Developer</span>, I enjoy creating responsive, user-friendly experiences while maintaining visually pleasing aesthetics.</p>
               <div className="flex justify-center sm:justify-normal gap-8">
-                <a href="#portfolio" className="scroll-smooth"><button className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center"><span className="mr-4"><BsCode color="#F2F2F2" size="24" /></span>My Work</button></a>
+                <a href="#portfolio" className="scroll-smooth"><button className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center scale-90 sm:scale-100"><span className="mr-4"><BsCode color="#F2F2F2" size="24" /></span>My Work</button></a>
                 <button className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center scale-90 sm:scale-100"><span className="mr-4"><TiDocumentText color="#F2F2F2" size="24" /></span>Resume</button>
               </div>
             </div>
@@ -187,7 +189,7 @@ const Home = () => {
               Front-End Developer
             </h1>
             <p className="text-evenLighterRaisinBlack text-xl tracking-wide leading-normal">
-              Hello, I'm <span className="text-whiteSmoke">Moses Osuna</span>. I'm a <span className="text-whiteSmoke">Front-End Developer</span> based in 🌵<span className="text-whiteSmoke">Tucson, Arizona</span> who enjoys working with React and other front-end tools. 
+              Hello, I'm <span className="text-whiteSmoke">Moses Osuna</span>. I'm a <span className="text-whiteSmoke">Front-End Developer</span> based in 🌵<span className="text-whiteSmoke">Tucson, Arizona</span> who enjoys working with <span className="text-whiteSmoke">React</span> and other front-end tools. 
               I look forward to opportunities that allow me to showcase my creativity and logical skills within a development team.
             </p>
             <button onClick={toggleAbout} className={`${showAbout ? "hidden" : ""} underline italic text-evenLighterRaisinBlack text-start w-fit`}>Show More...</button>
@@ -209,8 +211,9 @@ const Home = () => {
           <img src={violin} width="525px" height="350px" className="rounded-3xl" />
           <div className="max-w-xl">
             <p className="text-evenLighterRaisinBlack text-xl tracking-wide leading-normal">
-              Due to my love for learning, my free time is never boring or dull. I love 🎨Art, keeping up with ⌨️Programming Languages, playing 🎮Games, and the 🎻Violin.
-              In particular I've recently been having lots of fun with art and bought a drawing tablet to create digital art!
+              In regard to my hobbies, I am in love with learning and my free time is never void of some form of it.
+              I love 🎨Art, keeping up with ⌨️Programming Languages, playing 🎮Games, and playing the 🎻Violin.
+              In particular, I've recently been having lots of fun with art and bought a drawing tablet to create digital art!
             </p>
           </div>
         </div>
@@ -223,26 +226,59 @@ const Home = () => {
       <div id="contact" className="pt-16 sm:pt-52" />
 
       {/* contact */}
-      <div className="flex max-w-7xl mx-auto">
-        <div>
-
-        </div>
-        <div className='flex bg-lighterRaisinBlack flex-col shadow-smallContainer rounded-xl max-w-lg text-whiteSmoke'>
-          <div className='pt-12 pl-12'><h1 className="">Contact Me 📧</h1></div>
-          <form action="https://api.web3forms.com/submit" method="POST" className='flex flex-col gap-4 md:w-[500px] p-12 text-cloudBurstBlue'>
+      <div className="xs:px-4">
+        <div className='flex flex-col lg:flex-row max-w-7xl w-fit mx-auto bg-lighterRaisinBlack shadow-smallContainer rounded-xl text-whiteSmoke'>
+          <div className="bg-slightLighterRaisingBlack p-12 rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none">
+            <div className="flex flex-col justify-center items-center max-w-sm mx-auto gap-8 text-center">
+              <h1 className="text-2xl font-bold">Contact Information 📧</h1>
+              <p className="text-base">If you have questions or would even just like to chat about tech, feel free to contact me!</p>
+              <IconContext.Provider value={{color: "#F05D5E", size: "30"}}>
+                <div className="flex justify-center gap-8">
+                  <NavLink to="https://github.com/Schrixx" target="_blank" className="lg:hover:scale-105"><BsGithub /></NavLink>
+                  <NavLink to="https://www.linkedin.com/in/moses-osuna-a7501b9a/" target="_blank" className="lg:hover:scale-105"><BsLinkedin /></NavLink>
+                </div>
+              </IconContext.Provider>
+              <a href="mailto: xschrixx@gmail.com" className="w-fit hover:underline"><p className="text-base">xschrixx@gmail.com</p></a>
+            </div>
+          </div>
+          <form action="https://api.web3forms.com/submit" method="POST" className='flex flex-col gap-4 p-12 text-cloudBurstBlue'>
             <input type="hidden" name="access_key" value="41efc0b3-b988-4930-83cc-a6e32aebe63c" />
-
-            <input type="text" placeholder='Full Name*' name="name" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg placeholder:text-gray-400 outline-caribbeanCurrent' required />
-            <input type="email" placeholder='Email*' name="email" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg outline-caribbeanCurrent' required />
-            <div className='flex flex-col'>
-              <label className='italic text-slate-500 text-xs'>optional*</label>
-              <input type="text" name="Phone Number" placeholder='Phone Number*' className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg outline-caribbeanCurrent' required />
+            
+            <div className="flex flex-col md:flex-row gap-8">
+              <div className="flex flex-col">
+                <label className="text-base">First Name</label>
+                <input type="text" name="First Name" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg placeholder:text-gray-400 focus:outline-lighterBittersweet outline-offset-0 outline-none' autoComplete="off" required />
+              </div>
+              <div className="flex flex-col">
+                <label className="text-base">Last Name</label>
+                <input type="text" name="Last Name" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg placeholder:text-gray-400 focus:outline-lighterBittersweet outline-offset-0 outline-none' autoComplete="off" required />
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row gap-8">
+              <div className="flex flex-col">
+                <label className="text-base">Email</label>
+                <input type="email" name="email" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg placeholder:text-gray-400 focus:outline-lighterBittersweet outline-offset-0 outline-none' autoComplete="off" required />
+              </div>
+              <div className="flex flex-col">
+                <div className="flex justify-between">
+                  <label className='text-base'>Phone Number</label>
+                  <label className='italic text-darkerBittersweet text-base'>optional*</label>
+                </div>
+                <input type="text" name="Phone Number" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg placeholder:text-gray-400 focus:outline-lighterBittersweet outline-offset-0 outline-none' autoComplete="off" />
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <div className="flex justify-between">
+                <label className='text-base'>Subject</label>
+                <label className='italic text-darkerBittersweet text-base'>optional*</label>
+              </div>
+              <input type="text" name="subject" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg placeholder:text-gray-400 focus:outline-lighterBittersweet outline-offset-0 outline-none' autoComplete="off" />
             </div>
             <div className="flex flex-col">
               <label htmlFor="message">Message</label>
-              <label className="italic text-slate-500 text-sm">Max. 500 Characters</label>
+              <label className="italic text-darkerBittersweet text-sm">Max. 500 Characters</label>
             </div>
-            <textarea maxLength={500} name="message" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg h-48 resize-none outline-caribbeanCurrent' required />
+            <textarea maxLength={500} name="message" className='bg-evenLighterRaisinBlack p-1 bg-opacity-10 rounded-lg h-48 resize-none placeholder:text-gray-400 focus:outline-lighterBittersweet outline-offset-0 outline-none' autoComplete="off" required />
             <button className='p-2 bg-darkerBittersweet hover:bg-bittersweet text-whiteSmoke rounded-lg max-w-fit transition-colors'>Submit</button>
           </form>
         </div>
