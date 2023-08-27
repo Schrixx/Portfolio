@@ -27,6 +27,10 @@ export default {
         'xs': '373px',
         'portfolioScreen': '1152px',
         'aboutScreen': '1117px',
+      },
+      boxShadow: {
+        'hard': '10px 10px',
+        'negHard': '-10px -10px',
       }
     },
   },

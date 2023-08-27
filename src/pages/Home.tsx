@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { IconContext } from "react-icons"
 import { BsCode } from "react-icons/bs"
 import { HiCode } from "react-icons/hi"
-import { TiDocumentText } from "react-icons/ti"
+// import { TiDocumentText } from "react-icons/ti"
 import { RiComputerLine } from "react-icons/ri"
 import { HiOutlineMail } from "react-icons/hi"
 import { BsGithub } from "react-icons/bs"
@@ -18,7 +18,7 @@ import aboutIMG from "assets/portfolioImages/aboutIMG.jpg"
 import violin from "assets/portfolioImages/violin.jpg"
 import cactus from "assets/portfolioImages/cactus.jpg"
 
-import { companyWebsiteSkills, skillsData } from "src/data/skillsData"
+import { companyWebsiteSkills1, companyWebsiteSkills2, skillsData } from "src/data/skillsData"
 import { useState } from "react"
 
 const Home = () => {
@@ -32,7 +32,6 @@ const Home = () => {
     <Layout>
       <script src="https://web3forms.com/client/script.js" async defer></script>
       
-      {/* intro background */}
       <img src={introCurvyLines} className="hidden sm:block absolute z-[-1] top-0 right-0" />
 
       <div id="intro" className="pt-[65px] lg:pt-60" />
@@ -50,7 +49,7 @@ const Home = () => {
               <p className="text-4xl sm:text-5xl md:text-6xl curvyFont text-center sm:text-start">As a <span className="text-lighterBittersweet font-medium">Front-End Developer</span>, I enjoy creating responsive, user-friendly experiences while maintaining visually pleasing aesthetics.</p>
               <div className="flex justify-center sm:justify-normal gap-8">
                 <a href="#portfolio" className="scroll-smooth"><button className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center scale-90 sm:scale-100"><span className="mr-4"><BsCode color="#F2F2F2" size="24" /></span>My Work</button></a>
-                <button className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center scale-90 sm:scale-100"><span className="mr-4"><TiDocumentText color="#F2F2F2" size="24" /></span>Resume</button>
+                {/* <button className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center scale-90 sm:scale-100"><span className="mr-4"><TiDocumentText color="#F2F2F2" size="24" /></span>Resume</button> */}
               </div>
             </div>
           </div>
@@ -82,6 +81,9 @@ const Home = () => {
         </ul>
       </div>
 
+      <div className="relative"><img src={introCurvyLines} className="hidden sm:block absolute z-[-1] left-0 top-0" /></div>
+      
+
       <div id="portfolio" className="pt-16 sm:pt-52" />
 
       {/* portfolio */}
@@ -90,12 +92,13 @@ const Home = () => {
           <h1 className="text-4xl font-semibold">
             Portfolio
           </h1>
-          <p className="text-lighterHyundai">
+          <p className="text-lighterHyundai text-center portfolioScreen:text-start">
             Check out my projects using video demonstrations, links to source code, and live websites.
           </p>
         </div>
+        {/* 1 */}
         <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
-          <div className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/YgzISpOb-MY?si=BVB57nhSI7Bl63Zu" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
+          <div className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1 shadow-negHard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/YgzISpOb-MY?si=BVB57nhSI7Bl63Zu" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
           <div className="flex flex-col gap-4 max-w-lg order-1 portfolioScreen:order-2">
             <div className="flex items-center gap-2">
               <h1 className="text-2xl font-semibold">
@@ -117,7 +120,7 @@ const Home = () => {
             </div>
             <h1 className="text-2xl font-semibold">Tech Used</h1>
             <ul className="flex flex-wrap gap-4">
-              {companyWebsiteSkills.map((item) => {
+              {companyWebsiteSkills1.map((item) => {
                 return (
                   <li key={uuidv4()} className="flex items-center gap-2 bg-lighterRaisinBlack p-1 rounded-lg lg:hover:scale-105 transition-transform">
                     <img src={item.icon} className="h-5 w-auto" />
@@ -134,15 +137,52 @@ const Home = () => {
             </IconContext.Provider>
           </div>
         </div>
+        {/* 2 */}
         <div className="my-2 sm:my-4 portfolioScreen:my-0" />
         <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
-          <div className="bg-lighterRaisinBlack w-[560px] h-[315px] flex items-center justify-center order-2 text-center">
+          <div className="bg-lighterRaisinBlack w-[560px] h-[315px] flex items-center justify-center text-center order-2 shadow-hard shadow-lighterHyundai">
             <p className="text-2xl">Currently Under Development</p>
           </div>
           <div className="flex flex-col gap-4 max-w-lg order-1">
             <div className="flex items-center gap-2">
               <h1 className="text-2xl font-semibold">
-                2. Weather Web App
+                2. Portfolio Website
+              </h1>
+              <div className="h-px w-16 bg-hyundaiYellow" />
+            </div>
+            <p className="text-base text-evenLighterRaisinBlack">
+              This is my responsive portfolio website made by yours truly.
+              This is a one-page website with several sections showcasing my skills and adaptability for front-end development.
+              The colors were chosen by myself and the design was made using inspiration from many other websites.
+            </p>
+            <h1 className="text-2xl font-semibold">Tech Used</h1>
+            <ul className="flex flex-wrap gap-4">
+              {companyWebsiteSkills2.map((item) => {
+                return (
+                  <li key={uuidv4()} className="flex items-center gap-2 bg-lighterRaisinBlack p-1 rounded-lg lg:hover:scale-105 transition-transform">
+                    <img src={item.icon} className="h-5 w-auto" />
+                    <p className="tracking-wide cursor-default text-lg">{item.title}</p>
+                  </li>
+                )
+              })}
+            </ul>
+            <IconContext.Provider value={{color: "#ECA72C"}}>
+              <div className="flex gap-4 items-center">
+                <NavLink to="https://github.com/Schrixx/Weather-App" target="_blank" className="pt-2 tooltip" data-tooltip="Source Code"><button><HiCode size="36" /></button></NavLink>
+              </div>
+            </IconContext.Provider>
+          </div>
+        </div>
+        {/* 3 */}
+        <div className="my-2 sm:my-4 portfolioScreen:my-0" />
+        <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
+          <div className="bg-lighterRaisinBlack w-[560px] h-[315px] flex items-center justify-center order-2 portfolioScreen:order-1 text-center shadow-negHard shadow-lighterHyundai">
+            <p className="text-2xl">Currently Under Development</p>
+          </div>
+          <div className="flex flex-col gap-4 max-w-lg order-1 portfolioScreen:order-2">
+            <div className="flex items-center gap-2">
+              <h1 className="text-2xl font-semibold">
+                3. Weather Web App
               </h1>
               <div className="h-px w-16 bg-hyundaiYellow" />
             </div>
@@ -167,6 +207,8 @@ const Home = () => {
             </IconContext.Provider>
           </div>
         </div>
+        {/* 3 */}
+
       </div>
 
       <div id="about" className="pt-16 sm:pt-52" />
@@ -231,11 +273,11 @@ const Home = () => {
           <div className="bg-slightLighterRaisingBlack p-12 rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none">
             <div className="flex flex-col justify-center items-center max-w-sm mx-auto gap-8 text-center">
               <h1 className="text-2xl font-bold">Contact Information 📧</h1>
-              <p className="text-base">If you have questions or would even just like to chat about tech, feel free to contact me!</p>
+              <p className="text-base">If you have questions or would just like to talk about tech, feel free to contact me!</p>
               <IconContext.Provider value={{color: "#F05D5E", size: "30"}}>
                 <div className="flex justify-center gap-8">
-                  <NavLink to="https://github.com/Schrixx" target="_blank" className="lg:hover:scale-105"><BsGithub /></NavLink>
-                  <NavLink to="https://www.linkedin.com/in/moses-osuna-a7501b9a/" target="_blank" className="lg:hover:scale-105"><BsLinkedin /></NavLink>
+                  <NavLink to="https://github.com/Schrixx" target="_blank" className="lg:hover:scale-105 transition-transform"><BsGithub /></NavLink>
+                  <NavLink to="https://www.linkedin.com/in/moses-osuna-a7501b9a/" target="_blank" className="lg:hover:scale-105 transition-transform"><BsLinkedin /></NavLink>
                 </div>
               </IconContext.Provider>
               <a href="mailto: xschrixx@gmail.com" className="w-fit hover:underline"><p className="text-base">xschrixx@gmail.com</p></a>
