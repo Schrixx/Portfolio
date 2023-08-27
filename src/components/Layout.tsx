@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 
 import Navbar from 'src/components/Navbar'
+import Footer from './Footer'
 // import Footer from 'src/components/Footer'
 
 type layoutProps = {
@@ -12,7 +13,7 @@ const Layout = ({ children }: layoutProps) => {
     <>
       <Navbar />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

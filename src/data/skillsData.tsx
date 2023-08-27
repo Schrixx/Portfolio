@@ -47,7 +47,7 @@ export const skillsData = [
     },
 ]
 
-export const companyWebsiteSkills = [
+export const companyWebsiteSkills1 = [
     {
         icon: reactIcon,
         title: "React",
@@ -59,5 +59,16 @@ export const companyWebsiteSkills = [
     {
         icon: typescriptIcon,
         title: "Typescript",
+    },
+]
+
+export const companyWebsiteSkills2 = [
+    {
+        icon: reactIcon,
+        title: "React",
+    },
+    {
+        icon: tailwindIcon,
+        title: "Tailwind",
     },
 ]
