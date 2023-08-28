@@ -11,9 +11,11 @@ import { HiOutlineMail } from "react-icons/hi"
 import { BsGithub } from "react-icons/bs"
 import { BsLinkedin } from "react-icons/bs"
 
+import backgroundLines1 from "assets/background/backgroundLines1.svg"
+import backgroundLights from "assets/background/backgroundLights.svg"
+
 import githubIcon from "assets/logos/githubLogo.svg"
 import linkedInIcon from "assets/logos/linkedInLogo.svg"
-import introCurvyLines from "assets/introCurvyLines.svg"
 import aboutIMG from "assets/portfolioImages/aboutIMG.jpg"
 import violin from "assets/portfolioImages/violin.jpg"
 import cactus from "assets/portfolioImages/cactus.jpg"
@@ -32,7 +34,7 @@ const Home = () => {
     <Layout>
       <script src="https://web3forms.com/client/script.js" async defer></script>
       
-      <img src={introCurvyLines} className="hidden sm:block absolute z-[-1] top-0 right-0" />
+      <img src={backgroundLines1} className="hidden sm:block absolute z-[-1] top-0 right-0" />
 
       <div id="intro" className="pt-[65px] lg:pt-60" />
 
@@ -64,7 +66,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="pt-16 sm:pt-52" />
+      <div id="skills" className="pt-36 sm:pt-52" />
 
       {/* skills */}
       <div id="skills" className="px-4 lg:px-8 xl:px-0 xl:max-w-7xl xl:mx-auto text-whiteSmoke flex flex-col gap-4">
@@ -81,10 +83,7 @@ const Home = () => {
         </ul>
       </div>
 
-      <div className="relative"><img src={introCurvyLines} className="hidden sm:block absolute z-[-1] left-0 top-0" /></div>
-      
-
-      <div id="portfolio" className="pt-16 sm:pt-52" />
+      <div id="portfolio" className="pt-36 sm:pt-52" />
 
       {/* portfolio */}
       <div className="px-4 lg:px-8 xl:max-w-7xl xl:mx-auto text-whiteSmoke flex flex-col gap-20">
@@ -211,7 +210,7 @@ const Home = () => {
 
       </div>
 
-      <div id="about" className="pt-16 sm:pt-52" />
+      <div id="about" className="pt-36 sm:pt-52" />
       
       {/* About */}
       <div className="px-4 aboutScreen:px-0 aboutScreen:max-w-7xl aboutScreen:mx-auto flex flex-col justify-center gap-20 text-center aboutScreen:text-start">
@@ -222,7 +221,7 @@ const Home = () => {
           <div className="h-px w-4/5 bg-whiteSmoke" />
         </div>
         <div className="flex flex-wrap justify-center aboutScreen:justify-between items-center gap-4 aboutScreen:gap-0">
-          <img src={aboutIMG} width="525px" height="350px" className="rounded-3xl" />
+          <img src={aboutIMG} width="525px" height="350px" className="rounded-3xl shadow-hard" />
           <div className="flex flex-col gap-6 max-w-xl items-center aboutScreen:items-baseline">
             <h1 className="text-whiteSmoke text-5xl sm:text-6xl font-bold tracking-wide">
               Moses Osuna
@@ -239,7 +238,7 @@ const Home = () => {
           </div>
         </div>
         <div className={`${showAbout ? "flex": "hidden"} flex-wrap justify-center aboutScreen:justify-between items-center gap-4 aboutScreen:gap-0`}>
-          <img src={cactus} width="525px" height="350px" className="rounded-3xl" />
+          <img src={cactus} width="525px" height="350px" className="rounded-3xl shadow-hard" />
           <div className="max-w-xl">
             <p className="text-evenLighterRaisinBlack text-xl tracking-wide leading-normal">
               I was born and raised in Tucson, Arizona, always curious about technology and games as I was growing up.
@@ -250,12 +249,12 @@ const Home = () => {
           </div>
         </div>
         <div className={`${showAbout ? "flex": "hidden"} flex-wrap justify-center aboutScreen:justify-between items-center gap-4 aboutScreen:gap-0`}>
-          <img src={violin} width="525px" height="350px" className="rounded-3xl" />
+          <img src={violin} width="525px" height="350px" className="rounded-3xl shadow-hard" />
           <div className="max-w-xl">
             <p className="text-evenLighterRaisinBlack text-xl tracking-wide leading-normal">
               In regard to my hobbies, I am in love with learning and my free time is never void of some form of it.
               I love 🎨Art, keeping up with ⌨️Programming Languages, playing 🎮Games, and playing the 🎻Violin.
-              In particular, I've recently been having lots of fun with art and bought a drawing tablet to create digital art!
+              In particular, I've recently been having lots of fun with art and bought a drawing tablet to create digital art with!
             </p>
           </div>
         </div>
@@ -265,12 +264,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="contact" className="pt-16 sm:pt-52" />
+      <div id="contact" className="pt-36 sm:pt-52" />
 
       {/* contact */}
       <div className="xs:px-4">
-        <div className='flex flex-col lg:flex-row max-w-7xl w-fit mx-auto bg-lighterRaisinBlack shadow-smallContainer rounded-xl text-whiteSmoke'>
-          <div className="bg-slightLighterRaisingBlack p-12 rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none">
+        <div className='flex flex-col lg:flex-row max-w-7xl w-fit mx-auto bg-lighterRaisinBlack shadow-smallContainer rounded-xl text-whiteSmoke shadow-xl'>
+          <div className="relative bg-slightLighterRaisingBlack p-12 rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none">
+            <img src={backgroundLights} className="hidden lg:block absolute bottom-0 right-0 rounded-bl-xl" />
             <div className="flex flex-col justify-center items-center max-w-sm mx-auto gap-8 text-center">
               <h1 className="text-2xl font-bold">Contact Information 📧</h1>
               <p className="text-base">If you have questions or would just like to talk about tech, feel free to contact me!</p>
@@ -326,7 +326,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="pt-16 sm:pt-52" />
+      <div id="footer" className="pt-16 sm:pt-52" />
     </Layout>
   )
 }
