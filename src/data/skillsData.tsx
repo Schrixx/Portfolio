@@ -7,6 +7,7 @@ import githubIcon from "assets/logos/githubLogo.svg"
 import gitIcon from "assets/logos/gitIcon.svg"
 import tailwindIcon from "assets/logos/tailwindIcon.svg"
 import styledComponentsIcon from "assets/logos/styledComponentsIcon.svg"
+import framerIcon from "assets/logos/framerIcon.svg"
 
 export const skillsData = [
     {
@@ -32,6 +33,10 @@ export const skillsData = [
     {
         icon: githubIcon,
         title: "Github",
+    },
+    {
+        icon: framerIcon,
+        title: "Framer-Motion",
     },
     {
         icon: htmlIcon,
@@ -70,5 +75,9 @@ export const companyWebsiteSkills2 = [
     {
         icon: tailwindIcon,
         title: "Tailwind",
+    },
+    {
+        icon: framerIcon,
+        title: "Framer-Motion",
     },
 ]
