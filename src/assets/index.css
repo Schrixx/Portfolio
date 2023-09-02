@@ -9,6 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 @layer components {
@@ -25,7 +26,7 @@
   .tooltip::before,
   .tooltip::after {
     --scale: 0;
-    --raisin-black: #373137;
+    --darkBittersweet: #DF4445;
     --arrow-size: 10px;
 
     position: absolute;
@@ -45,7 +46,7 @@
     border-radius: 8px;
     /* text-align: center; if you have more than one word */
     /* max-width: max-content; if you have more than one word */
-    background: var(--raisin-black);
+    background: var(--darkBittersweet);
   }
   .tooltip:hover::before,
   .tooltip:hover::after {
@@ -56,7 +57,7 @@
 
     content: '';
     border: var(--arrow-size) solid transparent;
-    border-top-color: var(--raisin-black);
+    border-top-color: var(--darkBittersweet);
     transform-origin: top center;
   }
 }
