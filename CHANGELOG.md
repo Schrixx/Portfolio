@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0](https://github.com/Schrixx/Portfolio/compare/v0.2.0...v0.3.0) (2023-09-02)
+
+
+### Features
+
+* add about section ([4bac9c2](https://github.com/Schrixx/Portfolio/commit/4bac9c2bbfdd01632b6fa79d4dcc764d9b1a2c8f))
+* add contact section ([6cf1956](https://github.com/Schrixx/Portfolio/commit/6cf1956cfbe5170e277676c70a2e1f11e72f675a))
+* add footer ([f91cadf](https://github.com/Schrixx/Portfolio/commit/f91cadfb0bb37a1ddd1de99446a2fa8cc9dc08e7))
+* add footer section ([7cf77b5](https://github.com/Schrixx/Portfolio/commit/7cf77b580e95ddeaca8499bc1e9cbf4d8b9bc1f7))
+* add framer motion animations ([75b70bc](https://github.com/Schrixx/Portfolio/commit/75b70bcd00e2a4e99bea84f4c7dc0fc70bd8c83d))
+* add portfolio section ([c7e4531](https://github.com/Schrixx/Portfolio/commit/c7e4531db81aef6352edd70ac8c78308a423716b))
+* add skills section ([a2fe018](https://github.com/Schrixx/Portfolio/commit/a2fe0181affc747210aa208e3804f00b1eeb6659))
+
 ## [0.2.0](https://github.com/Schrixx/Portfolio/compare/v0.1.0...v0.2.0) (2023-08-18)
 
 
