@@ -146,9 +146,6 @@ const Home = () => {
         {/* 2 */}
         <div className="my-2 sm:my-4 portfolioScreen:my-0" />
         <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
-          <RevealRight className="bg-lighterRaisinBlack w-[560px] h-[315px] flex items-center justify-center text-center order-2 shadow-hard shadow-lighterHyundai">
-            <p className="text-2xl">Currently Under Development</p>
-          </RevealRight>
           <RevealLeft className="flex flex-col gap-4 max-w-lg order-1">
             <div className="flex items-center gap-2">
               <h1 className="text-2xl font-semibold">
@@ -157,7 +154,7 @@ const Home = () => {
               <div className="h-px w-16 bg-hyundaiYellow" />
             </div>
             <p className="text-base text-evenLighterRaisinBlack">
-              This is my responsive portfolio website made by yours truly.
+              This is my responsive portfolio website made by myself.
               This is a one-page website with several sections showcasing my skills and adaptability for front-end development.
               The colors were chosen by myself and the design was made using inspiration from many other websites.
             </p>
@@ -180,6 +177,7 @@ const Home = () => {
               </div>
             </IconContext.Provider>
           </RevealLeft>
+          <RevealRight className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1 shadow-hard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/E9hFY4UNiSM?si=Q2x3YE1p3Pivq9Mi" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></RevealRight>
         </div>
         {/* 3 */}
         <div className="my-2 sm:my-4 portfolioScreen:my-0" />
@@ -240,7 +238,7 @@ const Home = () => {
               Hello, I'm <span className="text-whiteSmoke">Moses Osuna</span>. I'm a <span className="text-whiteSmoke">Front-End Developer</span> based in 🌵<span className="text-whiteSmoke">Tucson, Arizona</span> who enjoys working with <span className="text-whiteSmoke">React</span> and other front-end tools. 
               I look forward to opportunities that allow me to showcase my creativity and logical skills within a development team.
             </p>
-            <button onClick={toggleAbout} className={`${showAbout ? "hidden" : ""} underline italic text-evenLighterRaisinBlack text-start w-fit`}>Show More...</button>
+            <button onClick={toggleAbout} className={`${showAbout ? "hidden" : ""} underline italic text-evenLighterRaisinBlack hover:text-whiteSmoke text-start w-fit transition-colors`}>Show More...</button>
             <a href="#contact" className={`${showAbout ? "hidden": ""} scroll-smooth`}><button className="bg-caribbeanCurrent hover:bg-evenLighterRaisinBlack text-whiteSmoke rounded-lg p-2 sm:p-3 w-fit transition-colors flex items-center"><span className="mr-4"><HiOutlineMail color="#F2F2F2" size="24" /></span>Contact Me</button></a>
           </RevealRight>
         </div>
@@ -266,7 +264,7 @@ const Home = () => {
           </RevealRight>
         </div>
         <div className="flex flex-col items-center gap-6">
-          <button onClick={toggleAbout} className={`${showAbout ? "" : "hidden"} underline italic text-evenLighterRaisinBlack text-start w-fit`}>...Show Less</button>
+          <button onClick={toggleAbout} className={`${showAbout ? "" : "hidden"} underline italic text-evenLighterRaisinBlack hover:text-whiteSmoke text-start w-fit transition-colors`}>...Show Less</button>
           <a href="#contact" className={`${showAbout ? "" : "hidden"} scroll-smooth`}><button className="bg-caribbeanCurrent hover:bg-evenLighterRaisinBlack text-whiteSmoke rounded-lg p-2 sm:p-3 w-fit transition-colors flex items-center"><span className="mr-4"><HiOutlineMail color="#F2F2F2" size="24" /></span>Contact Me</button></a>
         </div>
       </div>
