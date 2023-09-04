@@ -10,7 +10,7 @@ export default {
         raisinBlack: "#232123",
         slightLighterRaisingBlack: "#3F393F",
         lighterRaisinBlack: "#373137",
-        evenLighterRaisinBlack: "#8E818E",
+        evenLighterRaisinBlack: "#a194a1",
         lighterHyundai: "#FAC973",
         hyundaiYellow: "#ECA72C",
         whiteSmoke: "#F2F2F2",
