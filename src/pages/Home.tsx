@@ -13,8 +13,13 @@ import { RiComputerLine } from "react-icons/ri"
 import { HiOutlineMail } from "react-icons/hi"
 import { BsGithub } from "react-icons/bs"
 import { BsLinkedin } from "react-icons/bs"
+import { TiDocumentText } from "react-icons/ti"
 
 import backgroundLines1 from "assets/background/backgroundLines1.svg"
+import circuit1 from "assets/background/circuit1.svg"
+import circuit2 from "assets/background/circuit2.svg"
+import circuit3 from "assets/background/circuit3.svg"
+import circuit4 from "assets/background/circuit4.svg"
 import backgroundLights from "assets/background/backgroundLights.svg"
 
 import githubIcon from "assets/logos/githubLogo.svg"
@@ -36,7 +41,11 @@ const Home = () => {
     <Layout>
       <script src="https://web3forms.com/client/script.js" async defer></script>
       
-      <img src={backgroundLines1} className="hidden sm:block absolute z-[-1] top-0 right-0" />
+      <img src={backgroundLines1} className="hidden md:block absolute z-[-1] top-0 right-0" />
+      <img src={circuit1} className="hidden aboutScreen:block absolute z-[-1] top-[1250px] left-0" />
+      <img src={circuit2} className="hidden aboutScreen:block absolute z-[-1] top-[2200px] right-0" />
+      <img src={circuit3} className="hidden aboutScreen:block absolute z-[-1] top-[3200px] left-0" />
+      <img src={circuit4} className="hidden aboutScreen:block absolute z-[-1] top-[4200px] right-0" />
 
       <div id="intro" className="pt-[65px] lg:pt-60" />
 
@@ -53,7 +62,7 @@ const Home = () => {
               <p className="text-4xl sm:text-5xl md:text-6xl curvyFont text-center sm:text-start">As a <span className="text-lighterBittersweet font-medium">Front-End Developer</span>, I enjoy creating responsive, user-friendly experiences while maintaining visually pleasing aesthetics.</p>
               <div className="flex justify-center sm:justify-normal gap-8">
                 <a href="#portfolio" className="scroll-smooth"><button className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center scale-90 sm:scale-100"><span className="mr-4"><BsCode color="#F2F2F2" size="24" /></span>My Work</button></a>
-                {/* <button className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center scale-90 sm:scale-100"><span className="mr-4"><TiDocumentText color="#F2F2F2" size="24" /></span>Resume</button> */}
+                <a href="/resume" className="bg-darkerBittersweet hover:bg-bittersweet rounded-lg p-3 sm:p-4 w-fit transition-colors flex items-center scale-90 sm:scale-100"><span className="mr-4"><TiDocumentText color="#F2F2F2" size="24" /></span>Resume</a>
               </div>
             </div>
           </RevealLeft>
