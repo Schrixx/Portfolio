@@ -10,11 +10,11 @@ type layoutProps = {
 const Layout = ({ children }: layoutProps) => {
 
   return (
-    <>
+    <div className='overflow-x-hidden'>
       <Navbar />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
 
