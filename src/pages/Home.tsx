@@ -186,7 +186,7 @@ const Home = () => {
               </div>
             </IconContext.Provider>
           </RevealLeft>
-          <RevealRight className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1 shadow-hard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/E9hFY4UNiSM?si=Q2x3YE1p3Pivq9Mi" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></RevealRight>
+          <RevealRight className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1 shadow-hard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/XPfwgJzDtvI?si=8wNyEygiWWjacAxD" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></RevealRight>
         </div>
         {/* 3 */}
         <div className="my-2 sm:my-4 portfolioScreen:my-0" />
