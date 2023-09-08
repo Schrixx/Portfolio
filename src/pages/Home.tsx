@@ -182,7 +182,7 @@ const Home = () => {
             </ul>
             <IconContext.Provider value={{color: "#ECA72C"}}>
               <div className="flex gap-4 items-center">
-                <NavLink to="https://github.com/Schrixx/Weather-App" target="_blank" className="pt-2 tooltip" data-tooltip="Source Code"><button><HiCode size="36" /></button></NavLink>
+                <NavLink to="https://github.com/Schrixx/Portfolio" target="_blank" className="pt-2 tooltip" data-tooltip="Source Code"><button><HiCode size="36" /></button></NavLink>
               </div>
             </IconContext.Provider>
           </RevealLeft>
