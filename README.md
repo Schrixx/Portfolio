@@ -1,27 +1,20 @@
-# React + TypeScript + Vite
+![Schrixx Logo](src/assets/readme/schrixxLogoSmall.png)
+# Welcome To My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my responsive portfolio website made by myself. This is a one-page website with several sections showcasing my skills and adaptability for front-end development. The colors were chosen by myself and the design was made using inspiration from many other websites.
 
-Currently, two official plugins are available:
+### [Demo Video on YouTube](https://www.youtube.com/watch?v=XPfwgJzDtvI)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### [Live Website](https://schrixx.com)
 
-## Expanding the ESLint configuration
+# Features
+▪ Employed Framer Motion to craft exquisite website animations.
+<br>
+▪ Constructed a functional contact form which successfully facilitated more than 10 emails.
+<br>
+▪ Showcased video presentations and links to access project source code repositories.
+<br>
+▪ Implemented Vite to increase build times by up to 50%.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# How To Download
+Go to this repository's "[Releases](https://github.com/Schrixx/Portfolio/releases)" section to download the source code of the latest release.
