@@ -31,6 +31,7 @@ export default {
       boxShadow: {
         'hard': '10px 10px',
         'negHard': '-10px -10px',
+        'negHard2': '-10px 10px',
       }
     },
   },
