@@ -2,7 +2,7 @@ import { useState } from "react"
 import { NavLink } from "react-router-dom"
 
 import Layout from "src/components/Layout"
-import { RevealLeft, RevealRight, RevealStaggered, RevealVertical } from "src/components/RevealAnimations"
+import { RevealLeft, RevealRight, RevealStaggered, RevealVertical, RevealOpacity } from "src/components/RevealAnimations"
 
 import { v4 as uuidv4 } from "uuid"
 
@@ -28,7 +28,7 @@ import aboutIMG from "assets/portfolioImages/aboutIMG.jpg"
 import violin from "assets/portfolioImages/violin.jpg"
 import cactus from "assets/portfolioImages/cactus.jpg"
 
-import { companyWebsiteSkills1, companyWebsiteSkills2, skillsData } from "src/data/skillsData"
+import { companyWebsiteSkills1, companyWebsiteSkills2, companyWebsiteSkills3, skillsData } from "src/data/skillsData"
 
 const Home = () => {
   const [showAbout, setShowAbout] = useState<boolean>(false)
@@ -91,7 +91,6 @@ const Home = () => {
                   <p className="tracking-wide cursor-default">{item.title}</p>
                 </li>
               </RevealStaggered>
-
             )
           })}
         </ul>
@@ -111,11 +110,56 @@ const Home = () => {
         </RevealVertical>
         {/* 1 */}
         <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
-          <RevealLeft className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1 shadow-negHard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/YgzISpOb-MY?si=BVB57nhSI7Bl63Zu" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></RevealLeft>
+          <RevealLeft className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1 shadow-negHard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/1oms4JDP8ow?si=CcCYbN-PC-EkJeVx" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></RevealLeft>
           <RevealRight className="flex flex-col gap-4 max-w-lg order-1 portfolioScreen:order-2">
             <div className="flex items-center gap-2">
               <h1 className="text-2xl font-semibold">
-                1. Responsive Company Website
+                1. Weather Web App
+              </h1>
+              <div className="h-px w-16 bg-hyundaiYellow" />
+            </div>
+            <p className="text-base text-evenLighterRaisinBlack">
+            This is a Weather Web App made on my own. 
+            It's capable of displaying weather data on a given city; specifically the current high and low, humidity, sunrise and sunset, and finally wind speed. 
+            As for the UI and visuals I took inspiration from other weather app designs.
+            </p>
+            <div className="flex flex-col gap-4">
+              <h1 className="text-2xl font-semibold">Learning</h1>
+              <p className="text-base text-evenLighterRaisinBlack">
+                Implementing a debouncer into this project was a great learning experience.
+                Debouncers are sometimes neglected, but in large-scale projects, if you're calling an API on every keystroke there will be increased monetary costs.
+                Debouncers mitigate this problem by only calling the API after every 500ms rather than every keystroke.
+              </p>
+            </div>
+            <h1 className="text-2xl font-semibold">Tech Used</h1>
+            <ul className="flex flex-wrap gap-4">
+              {companyWebsiteSkills3.map((item, index) => {
+                return (
+                  <RevealStaggered key={uuidv4()} index={index}>
+                    <li className="flex items-center gap-2 bg-lighterRaisinBlack p-1 rounded-lg lg:hover:scale-105 transition-transform">
+                      <img src={item.icon} className="h-5 w-auto" />
+                      <p className="tracking-wide cursor-default text-lg">{item.title}</p>
+                    </li>
+                  </RevealStaggered>
+                )
+              })}
+            </ul>
+            <IconContext.Provider value={{color: "#ECA72C"}}>
+              <div className="flex gap-4 items-center">
+                <NavLink to="https://github.com/Schrixx/Weather-Website" target="_blank" className="pt-2 tooltip" data-tooltip="Source Code"><button><HiCode size="36" /></button></NavLink>
+                <NavLink to="https://weather-website-9vxun67sm-schrixx.vercel.app/" target="_blank" className="pt-2 tooltip" data-tooltip="Live Website"><button><RiComputerLine size="36" /></button></NavLink>
+              </div>
+            </IconContext.Provider>
+          </RevealRight>
+        </div>
+        {/* 2 */}
+        <div className="my-2 sm:my-4 portfolioScreen:my-0" />
+        <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
+          <RevealRight className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 shadow-negHard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/YgzISpOb-MY?si=BVB57nhSI7Bl63Zu" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></RevealRight>
+          <RevealLeft className="flex flex-col gap-4 max-w-lg order-1">
+            <div className="flex items-center gap-2">
+              <h1 className="text-2xl font-semibold">
+                2. Responsive Company Website
               </h1>
               <div className="h-px w-16 bg-hyundaiYellow" />
             </div>
@@ -150,15 +194,15 @@ const Home = () => {
                 <NavLink to="https://landing-page-schrixx.vercel.app/" target="_blank" className="pt-2 tooltip" data-tooltip="Live Website"><button><RiComputerLine size="36" /></button></NavLink>
               </div>
             </IconContext.Provider>
-          </RevealRight>
+          </RevealLeft>
         </div>
-        {/* 2 */}
+        {/* 3 */}
         <div className="my-2 sm:my-4 portfolioScreen:my-0" />
         <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
-          <RevealLeft className="flex flex-col gap-4 max-w-lg order-1">
+          <RevealRight className="flex flex-col gap-4 max-w-lg order-1 portfolioScreen:order-2">
             <div className="flex items-center gap-2">
               <h1 className="text-2xl font-semibold">
-                2. Portfolio Website
+                3. Portfolio Website
               </h1>
               <div className="h-px w-16 bg-hyundaiYellow" />
             </div>
@@ -185,42 +229,8 @@ const Home = () => {
                 <NavLink to="https://github.com/Schrixx/Portfolio" target="_blank" className="pt-2 tooltip" data-tooltip="Source Code"><button><HiCode size="36" /></button></NavLink>
               </div>
             </IconContext.Provider>
-          </RevealLeft>
-          <RevealRight className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1 shadow-hard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/XPfwgJzDtvI?si=8wNyEygiWWjacAxD" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></RevealRight>
-        </div>
-        {/* 3 */}
-        <div className="my-2 sm:my-4 portfolioScreen:my-0" />
-        <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
-          <RevealLeft className="bg-lighterRaisinBlack w-[560px] h-[315px] flex items-center justify-center order-2 portfolioScreen:order-1 text-center shadow-negHard shadow-lighterHyundai">
-            <p className="text-2xl">Currently Under Development</p>
-          </RevealLeft>
-          <RevealRight className="flex flex-col gap-4 max-w-lg order-1 portfolioScreen:order-2">
-            <div className="flex items-center gap-2">
-              <h1 className="text-2xl font-semibold">
-                3. Weather Web App
-              </h1>
-              <div className="h-px w-16 bg-hyundaiYellow" />
-            </div>
-            <p className="text-base text-evenLighterRaisinBlack">
-              This is a web app that displays the forecasted weather of a given location. 
-              It will tell you whether it's cloudy, the wind speed, humidity, what the weather feels like, and more.
-            </p>
-            <div className="flex flex-col gap-4">
-              <h1 className="text-2xl font-semibold">Challenges</h1>
-              <p className="text-base text-evenLighterRaisinBlack">
-                Currently under development.
-              </p>
-            </div>
-            <h1 className="text-2xl font-semibold">Tech Used</h1>
-            <ul className="flex flex-wrap gap-4">
-              <li className="text-evenLighterRaisinBlack text-base">Currently under development.</li>
-            </ul>
-            <IconContext.Provider value={{color: "#ECA72C"}}>
-              <div className="flex gap-4 items-center">
-                <NavLink to="https://github.com/Schrixx/Weather-App" target="_blank" className="pt-2 tooltip" data-tooltip="Source Code"><button><HiCode size="36" /></button></NavLink>
-              </div>
-            </IconContext.Provider>
           </RevealRight>
+          <RevealLeft className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1 shadow-hard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/XPfwgJzDtvI?si=8wNyEygiWWjacAxD" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></RevealLeft>
         </div>
       </div>
 
@@ -281,7 +291,7 @@ const Home = () => {
       <div id="contact" className="pt-36 sm:pt-52" />
 
       {/* contact */}
-      <RevealVertical className="xs:px-4">
+      <RevealOpacity className="xs:px-4">
         <div className='flex flex-col lg:flex-row max-w-7xl w-fit mx-auto bg-lighterRaisinBlack shadow-smallContainer rounded-xl text-whiteSmoke shadow-xl'>
           <div className="relative bg-slightLighterRaisingBlack p-12 rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none">
             <img src={backgroundLights} className="hidden lg:block absolute bottom-0 right-0 rounded-bl-xl" />
@@ -290,8 +300,8 @@ const Home = () => {
               <p className="text-base">If you have questions or would just like to talk about tech, feel free to contact me!</p>
               <IconContext.Provider value={{color: "#F05D5E", size: "30"}}>
                 <div className="flex justify-center gap-8">
-                  <NavLink to="https://github.com/Schrixx" target="_blank" className="lg:hover:scale-105 transition-transform"><BsGithub /></NavLink>
-                  <NavLink to="https://www.linkedin.com/in/moses-osuna-a7501b9a/" target="_blank" className="lg:hover:scale-105 transition-transform"><BsLinkedin /></NavLink>
+                  <NavLink to="https://github.com/Schrixx" target="_blank"><BsGithub /></NavLink>
+                  <NavLink to="https://www.linkedin.com/in/moses-osuna-a7501b9a/" target="_blank"><BsLinkedin /></NavLink>
                 </div>
               </IconContext.Provider>
               <a href="mailto: xschrixx@gmail.com" className="w-fit hover:underline"><p className="text-base">xschrixx@gmail.com</p></a>
@@ -338,7 +348,7 @@ const Home = () => {
             <button className='p-2 bg-darkerBittersweet hover:bg-bittersweet text-whiteSmoke rounded-lg max-w-fit transition-colors'>Submit</button>
           </form>
         </div>
-      </RevealVertical>
+      </RevealOpacity>
 
       <div id="footer" className="pt-16 sm:pt-52" />
     </Layout>
