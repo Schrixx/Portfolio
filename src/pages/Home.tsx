@@ -110,7 +110,7 @@ const Home = () => {
         </RevealVertical>
         {/* 1 */}
         <div className="flex flex-wrap lg:flex-row lg:items-center justify-center portfolioScreen:justify-between gap-4 px-4 sm:px-0">
-          <RevealLeft className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1 shadow-negHard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/4XLt0qWjxUc?si=hFkV9PZcf8T7XW4o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></RevealLeft>
+          <RevealLeft className="relative w-full pb-[56.25%] sm:pb-[40%] portfolioScreen:pb-[29%] h-0 max-w-[560px] order-2 portfolioScreen:order-1 shadow-negHard shadow-lighterHyundai"><iframe width="560" height="315" className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/PtpWXFo1x3c?si=Txau7cb3gx0iNxep" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></RevealLeft>
           <RevealRight className="flex flex-col gap-4 max-w-lg order-1 portfolioScreen:order-2">
             <div className="flex items-center gap-2">
               <h1 className="text-2xl font-semibold">
