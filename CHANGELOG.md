@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/Schrixx/Portfolio/compare/v0.3.0...v0.4.0) (2024-02-10)
+
+
+### Features
+
+* add weather web app to portfolio ([d3b167e](https://github.com/Schrixx/Portfolio/commit/d3b167e9480a4d956a9ccd6617c8ae7003878d17))
+
 ## [0.3.0](https://github.com/Schrixx/Portfolio/compare/v0.2.0...v0.3.0) (2023-09-02)
 
 
