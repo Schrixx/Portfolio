@@ -77,7 +77,26 @@ export const companyWebsiteSkills2 = [
         title: "Tailwind",
     },
     {
+        icon: typescriptIcon,
+        title: "Typescript",
+    },
+    {
         icon: framerIcon,
         title: "Framer-Motion",
+    },
+]
+
+export const companyWebsiteSkills3 = [
+    {
+        icon: reactIcon,
+        title: "React",
+    },
+    {
+        icon: tailwindIcon,
+        title: "Tailwind",
+    },
+    {
+        icon: typescriptIcon,
+        title: "Typescript",
     },
 ]
