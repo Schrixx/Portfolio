@@ -33,6 +33,24 @@ export const RevealVertical = ({children, className}: RevealProps) => {
   )
 }
 
+export const RevealOpacity = ({children, className}: RevealProps) => {
+  return (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 1, delay: 0.25 }}
+      viewport={{ once: true }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
 export const RevealLeft = ({children, className}: RevealProps) => {
 
   let motionAttributes = {
