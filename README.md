@@ -10,9 +10,12 @@ This is my responsive portfolio website made by myself. This is a one-page websi
 # Features
 ▪ Employed Framer Motion to craft exquisite website animations.
 <br>
+<br>
 ▪ Constructed a functional contact form which successfully facilitated more than 10 emails.
 <br>
+<br>
 ▪ Showcased video presentations and links to access project source code repositories.
+<br>
 <br>
 ▪ Implemented Vite to increase build times by up to 50%.
 
