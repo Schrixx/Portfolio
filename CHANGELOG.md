@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/Schrixx/Portfolio/compare/v0.4.0...v0.4.1) (2024-06-29)
+
+
+### Bug Fixes
+
+* fix wrong absolute pathing for pages directory ([9a60b68](https://github.com/Schrixx/Portfolio/commit/9a60b68a92024900ae210d64ef0c3b9ae52ae441))
+
 ## [0.4.0](https://github.com/Schrixx/Portfolio/compare/v0.3.0...v0.4.0) (2024-02-10)
 
 
